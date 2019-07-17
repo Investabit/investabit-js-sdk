@@ -1,4 +1,4 @@
-# InvestabitApi.DefaultResponse
+# Investabit.DefaultResponse
 
 ## Properties
 Name | Type | Description | Notes

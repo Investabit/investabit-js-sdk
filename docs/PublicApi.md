@@ -1,4 +1,4 @@
-# InvestabitApi.PublicApi
+# Investabit.PublicApi
 
 All URIs are relative to *https://api.investabit.com*
 
@@ -20,9 +20,9 @@ Current
 
 ### Example
 ```javascript
-var InvestabitApi = require('investabit_api');
+var Investabit = require('investabit');
 
-var apiInstance = new InvestabitApi.PublicApi();
+var apiInstance = new Investabit.PublicApi();
 
 var symbol = "\"btc\""; // String | The cryptocurrency symbol, default is btc.
 
@@ -66,9 +66,9 @@ Price History
 
 ### Example
 ```javascript
-var InvestabitApi = require('investabit_api');
+var Investabit = require('investabit');
 
-var apiInstance = new InvestabitApi.PublicApi();
+var apiInstance = new Investabit.PublicApi();
 
 var symbol = "\"btc\""; // String | The cryptocurrency symbol, default is btc.
 
@@ -112,9 +112,9 @@ Symbols
 
 ### Example
 ```javascript
-var InvestabitApi = require('investabit_api');
+var Investabit = require('investabit');
 
-var apiInstance = new InvestabitApi.PublicApi();
+var apiInstance = new Investabit.PublicApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -152,9 +152,9 @@ Trend
 
 ### Example
 ```javascript
-var InvestabitApi = require('investabit_api');
+var Investabit = require('investabit');
 
-var apiInstance = new InvestabitApi.PublicApi();
+var apiInstance = new Investabit.PublicApi();
 
 var symbol = "\"btc\""; // String | The cryptocurrency symbol, default is btc.
 

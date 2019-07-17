@@ -1,4 +1,4 @@
-# InvestabitApi.PublicCurrentResponseData
+# Investabit.PublicCurrentResponseData
 
 ## Properties
 Name | Type | Description | Notes

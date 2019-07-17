@@ -1,4 +1,4 @@
-# InvestabitApi.PublicSymbolsResponseDataSymbols
+# Investabit.PublicSymbolsResponseDataSymbols
 
 ## Properties
 Name | Type | Description | Notes

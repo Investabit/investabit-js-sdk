@@ -1,4 +1,4 @@
-# InvestabitApi.PublicPriceResponse
+# Investabit.PublicPriceResponse
 
 ## Properties
 Name | Type | Description | Notes

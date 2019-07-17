@@ -1,4 +1,4 @@
-# InvestabitApi.CurrentRoute
+# Investabit.CurrentRoute
 
 ## Properties
 Name | Type | Description | Notes

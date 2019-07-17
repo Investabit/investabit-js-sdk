@@ -1,4 +1,4 @@
-# InvestabitApi.PublicTrendResponse
+# Investabit.PublicTrendResponse
 
 ## Properties
 Name | Type | Description | Notes

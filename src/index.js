@@ -1,5 +1,5 @@
 /**
- * Investabit API
+ * Investabit
  * The Investabit API allows for access to all of the public facing services provided, including market data and forecasts.  ## General Overview  1. All API methods will be built to adhere to RESTful best practices as closely as possible. As such, all API calls will be made via the standard HTTP protocol using the GET/POST/PUT/DELETE request types.  2. Every request returns the status as a JSON response with the following   - success, true if it was successful   - code, the http status code (also in the response header)          200 if response is successful          400 if bad request          401 if authorization JWT is wrong or limit exceeded          404 wrong route          500 for any internal errors  - status, the status of the request, default **success**  - errors, an array of any relevant error details  3. For any requests that are not successful an error message is specified and returned as an array for the **errors** key in the JSON response.  4. All authentication uses JSON Web Tokens (JWT), which is set as the **Authorization** entry in the header, see the following for more details.     * http://jwt.io     * https://scotch.io/tutorials/the-anatomy-of-a-json-web-token
  *
  * OpenAPI spec version: 
@@ -30,9 +30,9 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var InvestabitApi = require('index'); // See note below*.
-   * var xxxSvc = new InvestabitApi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new InvestabitApi.Yyy(); // Construct a model instance.
+   * var Investabit = require('index'); // See note below*.
+   * var xxxSvc = new Investabit.XxxApi(); // Allocate the API class we're going to use.
+   * var yyyModel = new Investabit.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -44,8 +44,8 @@
    * <p>
    * A non-AMD browser application (discouraged) might do something like this:
    * <pre>
-   * var xxxSvc = new InvestabitApi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new InvestabitApi.Yyy(); // Construct a model instance.
+   * var xxxSvc = new Investabit.XxxApi(); // Allocate the API class we're going to use.
+   * var yyy = new Investabit.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
