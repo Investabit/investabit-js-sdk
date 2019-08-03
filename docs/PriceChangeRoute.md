@@ -1,9 +1,7 @@
-# Investabit.PublicPriceResponseDataHistory
+# Investabit.PriceChangeRoute
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**time** | **Number** |  | 
-**price** | **Number** |  | 
 
 

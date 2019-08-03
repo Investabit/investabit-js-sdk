@@ -5,7 +5,8 @@ All URIs are relative to *https://api.investabit.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v1PublicCurrentSymbolGet**](PublicApi.md#v1PublicCurrentSymbolGet) | **GET** /v1/public/current/{symbol} | Current
-[**v1PublicPriceHistorySymbolGet**](PublicApi.md#v1PublicPriceHistorySymbolGet) | **GET** /v1/public/price-history/{symbol} | Price History
+[**v1PublicPriceChangeSymbolGet**](PublicApi.md#v1PublicPriceChangeSymbolGet) | **GET** /v1/public/price-change/{symbol} | Price Change
+[**v1PublicPriceHistorySymbolPeriodIntervalGet**](PublicApi.md#v1PublicPriceHistorySymbolPeriodIntervalGet) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 [**v1PublicSymbolsGet**](PublicApi.md#v1PublicSymbolsGet) | **GET** /v1/public/symbols | Symbols
 [**v1PublicTrendSymbolGet**](PublicApi.md#v1PublicTrendSymbolGet) | **GET** /v1/public/trend/{symbol} | Trend
 
@@ -24,7 +25,7 @@ var Investabit = require('investabit');
 
 var apiInstance = new Investabit.PublicApi();
 
-var symbol = "\"btc\""; // String | The cryptocurrency symbol, default is btc.
+var symbol = "\"btc\""; // String | The cryptocurrency symbol, provide `all` to get every symbol.
 
 
 var callback = function(error, data, response) {
@@ -41,7 +42,7 @@ apiInstance.v1PublicCurrentSymbolGet(symbol, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **symbol** | **String**| The cryptocurrency symbol, default is btc. | 
+ **symbol** | **String**| The cryptocurrency symbol, provide &#x60;all&#x60; to get every symbol. | 
 
 ### Return type
 
@@ -56,9 +57,55 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="v1PublicPriceHistorySymbolGet"></a>
-# **v1PublicPriceHistorySymbolGet**
-> PublicPriceResponse v1PublicPriceHistorySymbolGet(symbol)
+<a name="v1PublicPriceChangeSymbolGet"></a>
+# **v1PublicPriceChangeSymbolGet**
+> PublicPriceChangeResponse v1PublicPriceChangeSymbolGet(symbol)
+
+Price Change
+
+
+
+### Example
+```javascript
+var Investabit = require('investabit');
+
+var apiInstance = new Investabit.PublicApi();
+
+var symbol = "\"btc\""; // String | The cryptocurrency symbol.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.v1PublicPriceChangeSymbolGet(symbol, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | **String**| The cryptocurrency symbol. | 
+
+### Return type
+
+[**PublicPriceChangeResponse**](PublicPriceChangeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="v1PublicPriceHistorySymbolPeriodIntervalGet"></a>
+# **v1PublicPriceHistorySymbolPeriodIntervalGet**
+> PublicPriceHistoryResponse v1PublicPriceHistorySymbolPeriodIntervalGet(symbol, period, interval)
 
 Price History
 
@@ -70,7 +117,11 @@ var Investabit = require('investabit');
 
 var apiInstance = new Investabit.PublicApi();
 
-var symbol = "\"btc\""; // String | The cryptocurrency symbol, default is btc.
+var symbol = "\"btc\""; // String | The cryptocurrency symbol, provide `all` to get every symbol.
+
+var period = "\"30d\""; // String | The period to get data for, such as past 30 days.
+
+var interval = "\"1d\""; // String | The bar interval, such as 1 day.
 
 
 var callback = function(error, data, response) {
@@ -80,18 +131,20 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.v1PublicPriceHistorySymbolGet(symbol, callback);
+apiInstance.v1PublicPriceHistorySymbolPeriodIntervalGet(symbol, period, interval, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **symbol** | **String**| The cryptocurrency symbol, default is btc. | 
+ **symbol** | **String**| The cryptocurrency symbol, provide &#x60;all&#x60; to get every symbol. | 
+ **period** | **String**| The period to get data for, such as past 30 days. | 
+ **interval** | **String**| The bar interval, such as 1 day. | 
 
 ### Return type
 
-[**PublicPriceResponse**](PublicPriceResponse.md)
+[**PublicPriceHistoryResponse**](PublicPriceHistoryResponse.md)
 
 ### Authorization
 
@@ -156,7 +209,7 @@ var Investabit = require('investabit');
 
 var apiInstance = new Investabit.PublicApi();
 
-var symbol = "\"btc\""; // String | The cryptocurrency symbol, default is btc.
+var symbol = "\"btc\""; // String | The cryptocurrency symbol.
 
 
 var callback = function(error, data, response) {
@@ -173,7 +226,7 @@ apiInstance.v1PublicTrendSymbolGet(symbol, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **symbol** | **String**| The cryptocurrency symbol, default is btc. | 
+ **symbol** | **String**| The cryptocurrency symbol. | 
 
 ### Return type
 

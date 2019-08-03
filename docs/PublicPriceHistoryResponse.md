@@ -1,4 +1,4 @@
-# Investabit.PublicPriceResponse
+# Investabit.PublicPriceHistoryResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **success** | **Boolean** |  | 
 **code** | **Number** |  | 
 **status** | **String** |  | 
-**data** | [**PublicPriceResponseData**](PublicPriceResponseData.md) |  | 
+**data** | [**PublicPriceHistoryResponseData**](PublicPriceHistoryResponseData.md) |  | 
 **errors** | **[Object]** |  | [optional] 
 
 

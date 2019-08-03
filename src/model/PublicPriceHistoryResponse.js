@@ -16,99 +16,98 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/PublicPriceHistoryResponseData'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./PublicPriceHistoryResponseData'));
   } else {
     // Browser globals (root is window)
     if (!root.Investabit) {
       root.Investabit = {};
     }
-    root.Investabit.PublicTrendResponseDataTrend = factory(root.Investabit.ApiClient);
+    root.Investabit.PublicPriceHistoryResponse = factory(root.Investabit.ApiClient, root.Investabit.PublicPriceHistoryResponseData);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PublicPriceHistoryResponseData) {
   'use strict';
 
 
 
 
   /**
-   * The PublicTrendResponseDataTrend model module.
-   * @module model/PublicTrendResponseDataTrend
+   * The PublicPriceHistoryResponse model module.
+   * @module model/PublicPriceHistoryResponse
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>PublicTrendResponseDataTrend</code>.
-   * @alias module:model/PublicTrendResponseDataTrend
+   * Constructs a new <code>PublicPriceHistoryResponse</code>.
+   * @alias module:model/PublicPriceHistoryResponse
    * @class
-   * @param interval {String} 
-   * @param weightedPrice {Number} 
-   * @param changeUsd {Number} 
-   * @param changePct {Number} 
-   * @param confidence {Number} 
+   * @param success {Boolean} 
+   * @param code {Number} 
+   * @param status {String} 
+   * @param data {module:model/PublicPriceHistoryResponseData} 
    */
-  var exports = function(interval, weightedPrice, changeUsd, changePct, confidence) {
+  var exports = function(success, code, status, data) {
     var _this = this;
 
-    _this['interval'] = interval;
-    _this['weighted_price'] = weightedPrice;
-    _this['change_usd'] = changeUsd;
-    _this['change_pct'] = changePct;
-    _this['confidence'] = confidence;
+    _this['success'] = success;
+    _this['code'] = code;
+    _this['status'] = status;
+    _this['data'] = data;
+
   };
 
   /**
-   * Constructs a <code>PublicTrendResponseDataTrend</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PublicPriceHistoryResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PublicTrendResponseDataTrend} obj Optional instance to populate.
-   * @return {module:model/PublicTrendResponseDataTrend} The populated <code>PublicTrendResponseDataTrend</code> instance.
+   * @param {module:model/PublicPriceHistoryResponse} obj Optional instance to populate.
+   * @return {module:model/PublicPriceHistoryResponse} The populated <code>PublicPriceHistoryResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('interval')) {
-        obj['interval'] = ApiClient.convertToType(data['interval'], 'String');
+      if (data.hasOwnProperty('success')) {
+        obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
       }
-      if (data.hasOwnProperty('weighted_price')) {
-        obj['weighted_price'] = ApiClient.convertToType(data['weighted_price'], 'Number');
+      if (data.hasOwnProperty('code')) {
+        obj['code'] = ApiClient.convertToType(data['code'], 'Number');
       }
-      if (data.hasOwnProperty('change_usd')) {
-        obj['change_usd'] = ApiClient.convertToType(data['change_usd'], 'Number');
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
-      if (data.hasOwnProperty('change_pct')) {
-        obj['change_pct'] = ApiClient.convertToType(data['change_pct'], 'Number');
+      if (data.hasOwnProperty('data')) {
+        obj['data'] = PublicPriceHistoryResponseData.constructFromObject(data['data']);
       }
-      if (data.hasOwnProperty('confidence')) {
-        obj['confidence'] = ApiClient.convertToType(data['confidence'], 'Number');
+      if (data.hasOwnProperty('errors')) {
+        obj['errors'] = ApiClient.convertToType(data['errors'], [Object]);
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} interval
+   * @member {Boolean} success
    */
-  exports.prototype['interval'] = undefined;
+  exports.prototype['success'] = undefined;
   /**
-   * @member {Number} weighted_price
+   * @member {Number} code
    */
-  exports.prototype['weighted_price'] = undefined;
+  exports.prototype['code'] = undefined;
   /**
-   * @member {Number} change_usd
+   * @member {String} status
    */
-  exports.prototype['change_usd'] = undefined;
+  exports.prototype['status'] = undefined;
   /**
-   * @member {Number} change_pct
+   * @member {module:model/PublicPriceHistoryResponseData} data
    */
-  exports.prototype['change_pct'] = undefined;
+  exports.prototype['data'] = undefined;
   /**
-   * @member {Number} confidence
+   * @member {Array.<Object>} errors
    */
-  exports.prototype['confidence'] = undefined;
+  exports.prototype['errors'] = undefined;
 
 
 

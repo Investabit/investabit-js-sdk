@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Investabit.PublicTrendResponseDataTrend();
+    instance = new Investabit.PriceChangeRoute();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,41 +49,11 @@
       object[property] = value;
   }
 
-  describe('PublicTrendResponseDataTrend', function() {
-    it('should create an instance of PublicTrendResponseDataTrend', function() {
-      // uncomment below and update the code to test PublicTrendResponseDataTrend
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
-      //expect(instance).to.be.a(Investabit.PublicTrendResponseDataTrend);
-    });
-
-    it('should have the property interval (base name: "interval")', function() {
-      // uncomment below and update the code to test the property interval
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property weightedPrice (base name: "weighted_price")', function() {
-      // uncomment below and update the code to test the property weightedPrice
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property changeUsd (base name: "change_usd")', function() {
-      // uncomment below and update the code to test the property changeUsd
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property changePct (base name: "change_pct")', function() {
-      // uncomment below and update the code to test the property changePct
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property confidence (base name: "confidence")', function() {
-      // uncomment below and update the code to test the property confidence
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
-      //expect(instance).to.be();
+  describe('PriceChangeRoute', function() {
+    it('should create an instance of PriceChangeRoute', function() {
+      // uncomment below and update the code to test PriceChangeRoute
+      //var instance = new Investabit.PriceChangeRoute();
+      //expect(instance).to.be.a(Investabit.PriceChangeRoute);
     });
 
   });

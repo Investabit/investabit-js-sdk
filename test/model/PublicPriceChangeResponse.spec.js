@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Investabit.PublicTrendResponseDataTrend();
+    instance = new Investabit.PublicPriceChangeResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,40 +49,40 @@
       object[property] = value;
   }
 
-  describe('PublicTrendResponseDataTrend', function() {
-    it('should create an instance of PublicTrendResponseDataTrend', function() {
-      // uncomment below and update the code to test PublicTrendResponseDataTrend
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
-      //expect(instance).to.be.a(Investabit.PublicTrendResponseDataTrend);
+  describe('PublicPriceChangeResponse', function() {
+    it('should create an instance of PublicPriceChangeResponse', function() {
+      // uncomment below and update the code to test PublicPriceChangeResponse
+      //var instance = new Investabit.PublicPriceChangeResponse();
+      //expect(instance).to.be.a(Investabit.PublicPriceChangeResponse);
     });
 
-    it('should have the property interval (base name: "interval")', function() {
-      // uncomment below and update the code to test the property interval
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
+    it('should have the property success (base name: "success")', function() {
+      // uncomment below and update the code to test the property success
+      //var instance = new Investabit.PublicPriceChangeResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property weightedPrice (base name: "weighted_price")', function() {
-      // uncomment below and update the code to test the property weightedPrice
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
+    it('should have the property code (base name: "code")', function() {
+      // uncomment below and update the code to test the property code
+      //var instance = new Investabit.PublicPriceChangeResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property changeUsd (base name: "change_usd")', function() {
-      // uncomment below and update the code to test the property changeUsd
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new Investabit.PublicPriceChangeResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property changePct (base name: "change_pct")', function() {
-      // uncomment below and update the code to test the property changePct
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
+    it('should have the property data (base name: "data")', function() {
+      // uncomment below and update the code to test the property data
+      //var instance = new Investabit.PublicPriceChangeResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property confidence (base name: "confidence")', function() {
-      // uncomment below and update the code to test the property confidence
-      //var instance = new Investabit.PublicTrendResponseDataTrend();
+    it('should have the property errors (base name: "errors")', function() {
+      // uncomment below and update the code to test the property errors
+      //var instance = new Investabit.PublicPriceChangeResponse();
       //expect(instance).to.be();
     });
 

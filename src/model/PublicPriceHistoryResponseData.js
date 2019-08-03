@@ -16,99 +16,63 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/PublicPriceHistoryResponseDataPriceHistory'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./PublicPriceHistoryResponseDataPriceHistory'));
   } else {
     // Browser globals (root is window)
     if (!root.Investabit) {
       root.Investabit = {};
     }
-    root.Investabit.PublicTrendResponseDataTrend = factory(root.Investabit.ApiClient);
+    root.Investabit.PublicPriceHistoryResponseData = factory(root.Investabit.ApiClient, root.Investabit.PublicPriceHistoryResponseDataPriceHistory);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PublicPriceHistoryResponseDataPriceHistory) {
   'use strict';
 
 
 
 
   /**
-   * The PublicTrendResponseDataTrend model module.
-   * @module model/PublicTrendResponseDataTrend
+   * The PublicPriceHistoryResponseData model module.
+   * @module model/PublicPriceHistoryResponseData
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>PublicTrendResponseDataTrend</code>.
-   * @alias module:model/PublicTrendResponseDataTrend
+   * Constructs a new <code>PublicPriceHistoryResponseData</code>.
+   * @alias module:model/PublicPriceHistoryResponseData
    * @class
-   * @param interval {String} 
-   * @param weightedPrice {Number} 
-   * @param changeUsd {Number} 
-   * @param changePct {Number} 
-   * @param confidence {Number} 
+   * @param priceHistory {Array.<module:model/PublicPriceHistoryResponseDataPriceHistory>} 
    */
-  var exports = function(interval, weightedPrice, changeUsd, changePct, confidence) {
+  var exports = function(priceHistory) {
     var _this = this;
 
-    _this['interval'] = interval;
-    _this['weighted_price'] = weightedPrice;
-    _this['change_usd'] = changeUsd;
-    _this['change_pct'] = changePct;
-    _this['confidence'] = confidence;
+    _this['price_history'] = priceHistory;
   };
 
   /**
-   * Constructs a <code>PublicTrendResponseDataTrend</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PublicPriceHistoryResponseData</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PublicTrendResponseDataTrend} obj Optional instance to populate.
-   * @return {module:model/PublicTrendResponseDataTrend} The populated <code>PublicTrendResponseDataTrend</code> instance.
+   * @param {module:model/PublicPriceHistoryResponseData} obj Optional instance to populate.
+   * @return {module:model/PublicPriceHistoryResponseData} The populated <code>PublicPriceHistoryResponseData</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('interval')) {
-        obj['interval'] = ApiClient.convertToType(data['interval'], 'String');
-      }
-      if (data.hasOwnProperty('weighted_price')) {
-        obj['weighted_price'] = ApiClient.convertToType(data['weighted_price'], 'Number');
-      }
-      if (data.hasOwnProperty('change_usd')) {
-        obj['change_usd'] = ApiClient.convertToType(data['change_usd'], 'Number');
-      }
-      if (data.hasOwnProperty('change_pct')) {
-        obj['change_pct'] = ApiClient.convertToType(data['change_pct'], 'Number');
-      }
-      if (data.hasOwnProperty('confidence')) {
-        obj['confidence'] = ApiClient.convertToType(data['confidence'], 'Number');
+      if (data.hasOwnProperty('price_history')) {
+        obj['price_history'] = ApiClient.convertToType(data['price_history'], [PublicPriceHistoryResponseDataPriceHistory]);
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} interval
+   * @member {Array.<module:model/PublicPriceHistoryResponseDataPriceHistory>} price_history
    */
-  exports.prototype['interval'] = undefined;
-  /**
-   * @member {Number} weighted_price
-   */
-  exports.prototype['weighted_price'] = undefined;
-  /**
-   * @member {Number} change_usd
-   */
-  exports.prototype['change_usd'] = undefined;
-  /**
-   * @member {Number} change_pct
-   */
-  exports.prototype['change_pct'] = undefined;
-  /**
-   * @member {Number} confidence
-   */
-  exports.prototype['confidence'] = undefined;
+  exports.prototype['price_history'] = undefined;
 
 
 

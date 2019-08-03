@@ -97,7 +97,7 @@ var Investabit = require('investabit');
 
 var api = new Investabit.PublicApi()
 
-var symbol = "\"btc\""; // {String} The cryptocurrency symbol, default is btc.
+var symbol = "\"btc\""; // {String} The cryptocurrency symbol, provide `all` to get every symbol.
 
 
 var callback = function(error, data, response) {
@@ -118,7 +118,8 @@ All URIs are relative to *https://api.investabit.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Investabit.PublicApi* | [**v1PublicCurrentSymbolGet**](docs/PublicApi.md#v1PublicCurrentSymbolGet) | **GET** /v1/public/current/{symbol} | Current
-*Investabit.PublicApi* | [**v1PublicPriceHistorySymbolGet**](docs/PublicApi.md#v1PublicPriceHistorySymbolGet) | **GET** /v1/public/price-history/{symbol} | Price History
+*Investabit.PublicApi* | [**v1PublicPriceChangeSymbolGet**](docs/PublicApi.md#v1PublicPriceChangeSymbolGet) | **GET** /v1/public/price-change/{symbol} | Price Change
+*Investabit.PublicApi* | [**v1PublicPriceHistorySymbolPeriodIntervalGet**](docs/PublicApi.md#v1PublicPriceHistorySymbolPeriodIntervalGet) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 *Investabit.PublicApi* | [**v1PublicSymbolsGet**](docs/PublicApi.md#v1PublicSymbolsGet) | **GET** /v1/public/symbols | Symbols
 *Investabit.PublicApi* | [**v1PublicTrendSymbolGet**](docs/PublicApi.md#v1PublicTrendSymbolGet) | **GET** /v1/public/trend/{symbol} | Trend
 
@@ -127,12 +128,18 @@ Class | Method | HTTP request | Description
 
  - [Investabit.CurrentRoute](docs/CurrentRoute.md)
  - [Investabit.DefaultResponse](docs/DefaultResponse.md)
+ - [Investabit.PriceChangeRoute](docs/PriceChangeRoute.md)
  - [Investabit.PriceHistoryRoute](docs/PriceHistoryRoute.md)
  - [Investabit.PublicCurrentResponse](docs/PublicCurrentResponse.md)
  - [Investabit.PublicCurrentResponseData](docs/PublicCurrentResponseData.md)
- - [Investabit.PublicPriceResponse](docs/PublicPriceResponse.md)
- - [Investabit.PublicPriceResponseData](docs/PublicPriceResponseData.md)
- - [Investabit.PublicPriceResponseDataHistory](docs/PublicPriceResponseDataHistory.md)
+ - [Investabit.PublicCurrentResponseDataCurrent](docs/PublicCurrentResponseDataCurrent.md)
+ - [Investabit.PublicPriceChangeResponse](docs/PublicPriceChangeResponse.md)
+ - [Investabit.PublicPriceChangeResponseData](docs/PublicPriceChangeResponseData.md)
+ - [Investabit.PublicPriceChangeResponseDataPriceChange](docs/PublicPriceChangeResponseDataPriceChange.md)
+ - [Investabit.PublicPriceHistoryResponse](docs/PublicPriceHistoryResponse.md)
+ - [Investabit.PublicPriceHistoryResponseData](docs/PublicPriceHistoryResponseData.md)
+ - [Investabit.PublicPriceHistoryResponseDataHistory](docs/PublicPriceHistoryResponseDataHistory.md)
+ - [Investabit.PublicPriceHistoryResponseDataPriceHistory](docs/PublicPriceHistoryResponseDataPriceHistory.md)
  - [Investabit.PublicSymbolsResponse](docs/PublicSymbolsResponse.md)
  - [Investabit.PublicSymbolsResponseData](docs/PublicSymbolsResponseData.md)
  - [Investabit.PublicSymbolsResponseDataSymbols](docs/PublicSymbolsResponseDataSymbols.md)
