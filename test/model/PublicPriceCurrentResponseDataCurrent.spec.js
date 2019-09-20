@@ -30,44 +30,44 @@
   var instance;
 
   describe('(package)', function() {
-    describe('PublicPriceChangeResponse', function() {
+    describe('PublicPriceCurrentResponseDataCurrent', function() {
       beforeEach(function() {
-        instance = new Investabit.PublicPriceChangeResponse();
+        instance = new Investabit.PublicPriceCurrentResponseDataCurrent();
       });
 
-      it('should create an instance of PublicPriceChangeResponse', function() {
-        // TODO: update the code to test PublicPriceChangeResponse
-        expect(instance).to.be.a(Investabit.PublicPriceChangeResponse);
+      it('should create an instance of PublicPriceCurrentResponseDataCurrent', function() {
+        // TODO: update the code to test PublicPriceCurrentResponseDataCurrent
+        expect(instance).to.be.a(Investabit.PublicPriceCurrentResponseDataCurrent);
       });
 
-      it('should have the property success (base name: "success")', function() {
-        // TODO: update the code to test the property success
-        expect(instance).to.have.property('success');
-        // expect(instance.success).to.be(expectedValueLiteral);
+      it('should have the property symbol (base name: "symbol")', function() {
+        // TODO: update the code to test the property symbol
+        expect(instance).to.have.property('symbol');
+        // expect(instance.symbol).to.be(expectedValueLiteral);
       });
 
-      it('should have the property code (base name: "code")', function() {
-        // TODO: update the code to test the property code
-        expect(instance).to.have.property('code');
-        // expect(instance.code).to.be(expectedValueLiteral);
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
       });
 
-      it('should have the property status (base name: "status")', function() {
-        // TODO: update the code to test the property status
-        expect(instance).to.have.property('status');
-        // expect(instance.status).to.be(expectedValueLiteral);
+      it('should have the property price (base name: "price")', function() {
+        // TODO: update the code to test the property price
+        expect(instance).to.have.property('price');
+        // expect(instance.price).to.be(expectedValueLiteral);
       });
 
-      it('should have the property data (base name: "data")', function() {
-        // TODO: update the code to test the property data
-        expect(instance).to.have.property('data');
-        // expect(instance.data).to.be(expectedValueLiteral);
+      it('should have the property changeUsd (base name: "change_usd")', function() {
+        // TODO: update the code to test the property changeUsd
+        expect(instance).to.have.property('changeUsd');
+        // expect(instance.changeUsd).to.be(expectedValueLiteral);
       });
 
-      it('should have the property errors (base name: "errors")', function() {
-        // TODO: update the code to test the property errors
-        expect(instance).to.have.property('errors');
-        // expect(instance.errors).to.be(expectedValueLiteral);
+      it('should have the property changePct (base name: "change_pct")', function() {
+        // TODO: update the code to test the property changePct
+        expect(instance).to.have.property('changePct');
+        // expect(instance.changePct).to.be(expectedValueLiteral);
       });
 
     });

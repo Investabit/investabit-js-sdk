@@ -1,4 +1,4 @@
-# Investabit.PublicCurrentResponseDataCurrent
+# Investabit.PublicPriceCurrentResponseDataCurrent
 
 ## Properties
 Name | Type | Description | Notes

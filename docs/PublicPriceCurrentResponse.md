@@ -1,4 +1,4 @@
-# Investabit.PublicCurrentResponse
+# Investabit.PublicPriceCurrentResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **success** | **Boolean** |  | 
 **code** | **Number** |  | 
 **status** | **String** |  | 
-**data** | [**PublicCurrentResponseData**](PublicCurrentResponseData.md) |  | 
+**data** | [**PublicPriceCurrentResponseData**](PublicPriceCurrentResponseData.md) |  | 
 **errors** | **[Object]** |  | [optional] 
 
 

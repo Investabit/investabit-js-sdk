@@ -16,47 +16,90 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/PublicPriceCurrentResponseData'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./PublicPriceCurrentResponseData'));
   } else {
     // Browser globals (root is window)
     if (!root.Investabit) {
       root.Investabit = {};
     }
-    root.Investabit.SymbolsRoute = factory(root.Investabit.ApiClient);
+    root.Investabit.PublicPriceCurrentResponse = factory(root.Investabit.ApiClient, root.Investabit.PublicPriceCurrentResponseData);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PublicPriceCurrentResponseData) {
   'use strict';
 
   /**
-   * The SymbolsRoute model module.
-   * @module model/SymbolsRoute
+   * The PublicPriceCurrentResponse model module.
+   * @module model/PublicPriceCurrentResponse
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>SymbolsRoute</code>.
-   * @alias module:model/SymbolsRoute
+   * Constructs a new <code>PublicPriceCurrentResponse</code>.
+   * @alias module:model/PublicPriceCurrentResponse
    * @class
+   * @param success {Boolean} 
+   * @param code {Number} 
+   * @param status {String} 
+   * @param data {module:model/PublicPriceCurrentResponseData} 
    */
-  var exports = function() {
+  var exports = function(success, code, status, data) {
+    this.success = success;
+    this.code = code;
+    this.status = status;
+    this.data = data;
   };
 
   /**
-   * Constructs a <code>SymbolsRoute</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PublicPriceCurrentResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SymbolsRoute} obj Optional instance to populate.
-   * @return {module:model/SymbolsRoute} The populated <code>SymbolsRoute</code> instance.
+   * @param {module:model/PublicPriceCurrentResponse} obj Optional instance to populate.
+   * @return {module:model/PublicPriceCurrentResponse} The populated <code>PublicPriceCurrentResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('success'))
+        obj.success = ApiClient.convertToType(data['success'], 'Boolean');
+      if (data.hasOwnProperty('code'))
+        obj.code = ApiClient.convertToType(data['code'], 'Number');
+      if (data.hasOwnProperty('status'))
+        obj.status = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('data'))
+        obj.data = PublicPriceCurrentResponseData.constructFromObject(data['data']);
+      if (data.hasOwnProperty('errors'))
+        obj.errors = ApiClient.convertToType(data['errors'], [Object]);
     }
     return obj;
   }
+
+  /**
+   * @member {Boolean} success
+   */
+  exports.prototype.success = undefined;
+
+  /**
+   * @member {Number} code
+   */
+  exports.prototype.code = undefined;
+
+  /**
+   * @member {String} status
+   */
+  exports.prototype.status = undefined;
+
+  /**
+   * @member {module:model/PublicPriceCurrentResponseData} data
+   */
+  exports.prototype.data = undefined;
+
+  /**
+   * @member {Array.<Object>} errors
+   */
+  exports.prototype.errors = undefined;
 
   return exports;
 

@@ -4,58 +4,12 @@ All URIs are relative to *https://api.investabit.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1PublicCurrentSymbolGet**](PublicApi.md#v1PublicCurrentSymbolGet) | **GET** /v1/public/current/{symbol} | Current
 [**v1PublicPriceChangeSymbolGet**](PublicApi.md#v1PublicPriceChangeSymbolGet) | **GET** /v1/public/price-change/{symbol} | Price Change
+[**v1PublicPriceCurrentSymbolGet**](PublicApi.md#v1PublicPriceCurrentSymbolGet) | **GET** /v1/public/price-current/{symbol} | Price Current
 [**v1PublicPriceHistorySymbolPeriodIntervalGet**](PublicApi.md#v1PublicPriceHistorySymbolPeriodIntervalGet) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 [**v1PublicSymbolsGet**](PublicApi.md#v1PublicSymbolsGet) | **GET** /v1/public/symbols | Symbols
 [**v1PublicTrendSymbolGet**](PublicApi.md#v1PublicTrendSymbolGet) | **GET** /v1/public/trend/{symbol} | Trend
 
-
-<a name="v1PublicCurrentSymbolGet"></a>
-# **v1PublicCurrentSymbolGet**
-> PublicCurrentResponse v1PublicCurrentSymbolGet(symbol)
-
-Current
-
-
-
-### Example
-```javascript
-var Investabit = require('investabit');
-
-var apiInstance = new Investabit.PublicApi();
-
-var symbol = "\"btc\""; // String | The cryptocurrency symbol, provide `all` to get every symbol.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.v1PublicCurrentSymbolGet(symbol, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **symbol** | **String**| The cryptocurrency symbol, provide &#x60;all&#x60; to get every symbol. | 
-
-### Return type
-
-[**PublicCurrentResponse**](PublicCurrentResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 <a name="v1PublicPriceChangeSymbolGet"></a>
 # **v1PublicPriceChangeSymbolGet**
@@ -71,7 +25,7 @@ var Investabit = require('investabit');
 
 var apiInstance = new Investabit.PublicApi();
 
-var symbol = "\"btc\""; // String | The cryptocurrency symbol.
+var symbol = "btc"; // String | The cryptocurrency symbol.
 
 
 var callback = function(error, data, response) {
@@ -103,6 +57,52 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="v1PublicPriceCurrentSymbolGet"></a>
+# **v1PublicPriceCurrentSymbolGet**
+> PublicPriceCurrentResponse v1PublicPriceCurrentSymbolGet(symbol)
+
+Price Current
+
+
+
+### Example
+```javascript
+var Investabit = require('investabit');
+
+var apiInstance = new Investabit.PublicApi();
+
+var symbol = "btc"; // String | The cryptocurrency symbol, provide `all` to get every symbol.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.v1PublicPriceCurrentSymbolGet(symbol, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | **String**| The cryptocurrency symbol, provide `all` to get every symbol. | 
+
+### Return type
+
+[**PublicPriceCurrentResponse**](PublicPriceCurrentResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="v1PublicPriceHistorySymbolPeriodIntervalGet"></a>
 # **v1PublicPriceHistorySymbolPeriodIntervalGet**
 > PublicPriceHistoryResponse v1PublicPriceHistorySymbolPeriodIntervalGet(symbol, period, interval)
@@ -117,11 +117,11 @@ var Investabit = require('investabit');
 
 var apiInstance = new Investabit.PublicApi();
 
-var symbol = "\"btc\""; // String | The cryptocurrency symbol, provide `all` to get every symbol.
+var symbol = "btc"; // String | The cryptocurrency symbol, provide `all` to get every symbol.
 
-var period = "\"30d\""; // String | The period to get data for, such as past 30 days.
+var period = "30d"; // String | The period to get data for, such as past 30 days.
 
-var interval = "\"1d\""; // String | The bar interval, such as 1 day.
+var interval = "1d"; // String | The bar interval, such as 1 day.
 
 
 var callback = function(error, data, response) {
@@ -138,7 +138,7 @@ apiInstance.v1PublicPriceHistorySymbolPeriodIntervalGet(symbol, period, interval
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **symbol** | **String**| The cryptocurrency symbol, provide &#x60;all&#x60; to get every symbol. | 
+ **symbol** | **String**| The cryptocurrency symbol, provide `all` to get every symbol. | 
  **period** | **String**| The period to get data for, such as past 30 days. | 
  **interval** | **String**| The bar interval, such as 1 day. | 
 
@@ -209,7 +209,7 @@ var Investabit = require('investabit');
 
 var apiInstance = new Investabit.PublicApi();
 
-var symbol = "\"btc\""; // String | The cryptocurrency symbol.
+var symbol = "btc"; // String | The cryptocurrency symbol.
 
 
 var callback = function(error, data, response) {
