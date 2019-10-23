@@ -25,43 +25,49 @@
     if (!root.Investabit) {
       root.Investabit = {};
     }
-    root.Investabit.PublicSymbolsResponseDataSymbols = factory(root.Investabit.ApiClient);
+    root.Investabit.PublicWaitingListRequest = factory(root.Investabit.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The PublicSymbolsResponseDataSymbols model module.
-   * @module model/PublicSymbolsResponseDataSymbols
+   * The PublicWaitingListRequest model module.
+   * @module model/PublicWaitingListRequest
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>PublicSymbolsResponseDataSymbols</code>.
-   * @alias module:model/PublicSymbolsResponseDataSymbols
+   * Constructs a new <code>PublicWaitingListRequest</code>.
+   * @alias module:model/PublicWaitingListRequest
    * @class
-   * @param name {String} 
-   * @param symbol {String} 
+   * @param email {String} 
+   * @param service {String} 
+   * @param listId {String} 
    */
-  var exports = function(name, symbol) {
-    this.name = name;
-    this.symbol = symbol;
+  var exports = function(email, service, listId) {
+    this.email = email;
+    this.service = service;
+    this.listId = listId;
   };
 
   /**
-   * Constructs a <code>PublicSymbolsResponseDataSymbols</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PublicWaitingListRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PublicSymbolsResponseDataSymbols} obj Optional instance to populate.
-   * @return {module:model/PublicSymbolsResponseDataSymbols} The populated <code>PublicSymbolsResponseDataSymbols</code> instance.
+   * @param {module:model/PublicWaitingListRequest} obj Optional instance to populate.
+   * @return {module:model/PublicWaitingListRequest} The populated <code>PublicWaitingListRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('symbol'))
-        obj.symbol = ApiClient.convertToType(data['symbol'], 'String');
+      if (data.hasOwnProperty('email'))
+        obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('service'))
+        obj.service = ApiClient.convertToType(data['service'], 'String');
+      if (data.hasOwnProperty('list_id'))
+        obj.listId = ApiClient.convertToType(data['list_id'], 'String');
     }
     return obj;
   }
@@ -72,9 +78,19 @@
   exports.prototype.name = undefined;
 
   /**
-   * @member {String} symbol
+   * @member {String} email
    */
-  exports.prototype.symbol = undefined;
+  exports.prototype.email = undefined;
+
+  /**
+   * @member {String} service
+   */
+  exports.prototype.service = undefined;
+
+  /**
+   * @member {String} listId
+   */
+  exports.prototype.listId = undefined;
 
   return exports;
 

@@ -30,26 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('PublicPriceHistoryResponseDataHistory', function() {
+    describe('WaitingListRoute', function() {
       beforeEach(function() {
-        instance = new Investabit.PublicPriceHistoryResponseDataHistory();
+        instance = new Investabit.WaitingListRoute();
       });
 
-      it('should create an instance of PublicPriceHistoryResponseDataHistory', function() {
-        // TODO: update the code to test PublicPriceHistoryResponseDataHistory
-        expect(instance).to.be.a(Investabit.PublicPriceHistoryResponseDataHistory);
-      });
-
-      it('should have the property time (base name: "time")', function() {
-        // TODO: update the code to test the property time
-        expect(instance).to.have.property('time');
-        // expect(instance.time).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property price (base name: "price")', function() {
-        // TODO: update the code to test the property price
-        expect(instance).to.have.property('price');
-        // expect(instance.price).to.be(expectedValueLiteral);
+      it('should create an instance of WaitingListRoute', function() {
+        // TODO: update the code to test WaitingListRoute
+        expect(instance).to.be.a(Investabit.WaitingListRoute);
       });
 
     });

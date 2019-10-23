@@ -122,6 +122,7 @@ Class | Method | HTTP request | Description
 *Investabit.PublicApi* | [**v1PublicPriceHistorySymbolPeriodIntervalGet**](docs/PublicApi.md#v1PublicPriceHistorySymbolPeriodIntervalGet) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 *Investabit.PublicApi* | [**v1PublicSymbolsGet**](docs/PublicApi.md#v1PublicSymbolsGet) | **GET** /v1/public/symbols | Symbols
 *Investabit.PublicApi* | [**v1PublicTrendSymbolGet**](docs/PublicApi.md#v1PublicTrendSymbolGet) | **GET** /v1/public/trend/{symbol} | Trend
+*Investabit.PublicApi* | [**v1PublicWaitingListPost**](docs/PublicApi.md#v1PublicWaitingListPost) | **POST** /v1/public/waiting-list | Waiting List
 
 
 ## Documentation for Models
@@ -146,8 +147,10 @@ Class | Method | HTTP request | Description
  - [Investabit.PublicTrendResponse](docs/PublicTrendResponse.md)
  - [Investabit.PublicTrendResponseData](docs/PublicTrendResponseData.md)
  - [Investabit.PublicTrendResponseDataTrend](docs/PublicTrendResponseDataTrend.md)
+ - [Investabit.PublicWaitingListRequest](docs/PublicWaitingListRequest.md)
  - [Investabit.SymbolsRoute](docs/SymbolsRoute.md)
  - [Investabit.TrendRoute](docs/TrendRoute.md)
+ - [Investabit.WaitingListRoute](docs/WaitingListRoute.md)
 
 
 ## Documentation for Authorization

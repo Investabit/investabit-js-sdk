@@ -30,26 +30,38 @@
   var instance;
 
   describe('(package)', function() {
-    describe('PublicPriceHistoryResponseDataHistory', function() {
+    describe('PublicWaitingListRequest', function() {
       beforeEach(function() {
-        instance = new Investabit.PublicPriceHistoryResponseDataHistory();
+        instance = new Investabit.PublicWaitingListRequest();
       });
 
-      it('should create an instance of PublicPriceHistoryResponseDataHistory', function() {
-        // TODO: update the code to test PublicPriceHistoryResponseDataHistory
-        expect(instance).to.be.a(Investabit.PublicPriceHistoryResponseDataHistory);
+      it('should create an instance of PublicWaitingListRequest', function() {
+        // TODO: update the code to test PublicWaitingListRequest
+        expect(instance).to.be.a(Investabit.PublicWaitingListRequest);
       });
 
-      it('should have the property time (base name: "time")', function() {
-        // TODO: update the code to test the property time
-        expect(instance).to.have.property('time');
-        // expect(instance.time).to.be(expectedValueLiteral);
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
       });
 
-      it('should have the property price (base name: "price")', function() {
-        // TODO: update the code to test the property price
-        expect(instance).to.have.property('price');
-        // expect(instance.price).to.be(expectedValueLiteral);
+      it('should have the property email (base name: "email")', function() {
+        // TODO: update the code to test the property email
+        expect(instance).to.have.property('email');
+        // expect(instance.email).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property service (base name: "service")', function() {
+        // TODO: update the code to test the property service
+        expect(instance).to.have.property('service');
+        // expect(instance.service).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property listId (base name: "list_id")', function() {
+        // TODO: update the code to test the property listId
+        expect(instance).to.have.property('listId');
+        // expect(instance.listId).to.be(expectedValueLiteral);
       });
 
     });

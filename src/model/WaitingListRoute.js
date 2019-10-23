@@ -25,56 +25,38 @@
     if (!root.Investabit) {
       root.Investabit = {};
     }
-    root.Investabit.PublicSymbolsResponseDataSymbols = factory(root.Investabit.ApiClient);
+    root.Investabit.WaitingListRoute = factory(root.Investabit.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The PublicSymbolsResponseDataSymbols model module.
-   * @module model/PublicSymbolsResponseDataSymbols
+   * The WaitingListRoute model module.
+   * @module model/WaitingListRoute
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>PublicSymbolsResponseDataSymbols</code>.
-   * @alias module:model/PublicSymbolsResponseDataSymbols
+   * Constructs a new <code>WaitingListRoute</code>.
+   * @alias module:model/WaitingListRoute
    * @class
-   * @param name {String} 
-   * @param symbol {String} 
    */
-  var exports = function(name, symbol) {
-    this.name = name;
-    this.symbol = symbol;
+  var exports = function() {
   };
 
   /**
-   * Constructs a <code>PublicSymbolsResponseDataSymbols</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WaitingListRoute</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PublicSymbolsResponseDataSymbols} obj Optional instance to populate.
-   * @return {module:model/PublicSymbolsResponseDataSymbols} The populated <code>PublicSymbolsResponseDataSymbols</code> instance.
+   * @param {module:model/WaitingListRoute} obj Optional instance to populate.
+   * @return {module:model/WaitingListRoute} The populated <code>WaitingListRoute</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('symbol'))
-        obj.symbol = ApiClient.convertToType(data['symbol'], 'String');
     }
     return obj;
   }
-
-  /**
-   * @member {String} name
-   */
-  exports.prototype.name = undefined;
-
-  /**
-   * @member {String} symbol
-   */
-  exports.prototype.symbol = undefined;
 
   return exports;
 
