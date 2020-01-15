@@ -1,4 +1,4 @@
-# Investabit.PublicTrendResponseData
+# CryptoWeather.PublicTrendResponseData
 
 ## Properties
 Name | Type | Description | Notes

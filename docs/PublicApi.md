@@ -1,6 +1,6 @@
-# Investabit.PublicApi
+# CryptoWeather.PublicApi
 
-All URIs are relative to *https://api.investabit.com*
+All URIs are relative to *https://api.cryptoweather.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**v1PublicPriceHistorySymbolPeriodIntervalGet**](PublicApi.md#v1PublicPriceHistorySymbolPeriodIntervalGet) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 [**v1PublicSymbolsGet**](PublicApi.md#v1PublicSymbolsGet) | **GET** /v1/public/symbols | Symbols
 [**v1PublicTrendSymbolGet**](PublicApi.md#v1PublicTrendSymbolGet) | **GET** /v1/public/trend/{symbol} | Trend
-[**v1PublicWaitingListPost**](PublicApi.md#v1PublicWaitingListPost) | **POST** /v1/public/waiting-list | Waiting List
 
 
 <a name="v1PublicPriceChangeSymbolGet"></a>
@@ -22,9 +21,9 @@ Price Change
 
 ### Example
 ```javascript
-var Investabit = require('investabit');
+var CryptoWeather = require('crypto_weather');
 
-var apiInstance = new Investabit.PublicApi();
+var apiInstance = new CryptoWeather.PublicApi();
 
 var symbol = "btc"; // String | The cryptocurrency symbol.
 
@@ -68,9 +67,9 @@ Price Current
 
 ### Example
 ```javascript
-var Investabit = require('investabit');
+var CryptoWeather = require('crypto_weather');
 
-var apiInstance = new Investabit.PublicApi();
+var apiInstance = new CryptoWeather.PublicApi();
 
 var symbol = "btc"; // String | The cryptocurrency symbol, provide `all` to get every symbol.
 
@@ -114,9 +113,9 @@ Price History
 
 ### Example
 ```javascript
-var Investabit = require('investabit');
+var CryptoWeather = require('crypto_weather');
 
-var apiInstance = new Investabit.PublicApi();
+var apiInstance = new CryptoWeather.PublicApi();
 
 var symbol = "btc"; // String | The cryptocurrency symbol, provide `all` to get every symbol.
 
@@ -166,9 +165,9 @@ Symbols
 
 ### Example
 ```javascript
-var Investabit = require('investabit');
+var CryptoWeather = require('crypto_weather');
 
-var apiInstance = new Investabit.PublicApi();
+var apiInstance = new CryptoWeather.PublicApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -202,13 +201,13 @@ No authorization required
 
 Trend
 
-
+The trend response contains a collection of forecasts for different intervals with the following attributes.  + `time_start` start time of the period the forecast is applicable for  + `time_end` end time of the period the forecast is applicable for  + `interval` interval in hours that the forecast is applicable for  + `weighted_price` forecasted weighted price during the period  + `change_pct` percent change in price for forecasted weighted_price relative to current price  + `change_usd` dollar change in price for forecasted weighted_price relative to current price
 
 ### Example
 ```javascript
-var Investabit = require('investabit');
+var CryptoWeather = require('crypto_weather');
 
-var apiInstance = new Investabit.PublicApi();
+var apiInstance = new CryptoWeather.PublicApi();
 
 var symbol = "btc"; // String | The cryptocurrency symbol.
 
@@ -232,53 +231,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PublicTrendResponse**](PublicTrendResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="v1PublicWaitingListPost"></a>
-# **v1PublicWaitingListPost**
-> DefaultResponse v1PublicWaitingListPost(opts)
-
-Waiting List
-
-Subscribe a user to the waiting list, `name` is not required.
-
-### Example
-```javascript
-var Investabit = require('investabit');
-
-var apiInstance = new Investabit.PublicApi();
-
-var opts = { 
-  'body': new Investabit.PublicWaitingListRequest() // PublicWaitingListRequest | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.v1PublicWaitingListPost(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**PublicWaitingListRequest**](PublicWaitingListRequest.md)|  | [optional] 
-
-### Return type
-
-[**DefaultResponse**](DefaultResponse.md)
 
 ### Authorization
 

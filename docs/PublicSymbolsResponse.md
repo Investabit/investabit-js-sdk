@@ -1,4 +1,4 @@
-# Investabit.PublicSymbolsResponse
+# CryptoWeather.PublicSymbolsResponse
 
 ## Properties
 Name | Type | Description | Notes

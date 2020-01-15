@@ -1,4 +1,4 @@
-# Investabit.DefaultResponse
+# CryptoWeather.DefaultResponse
 
 ## Properties
 Name | Type | Description | Notes

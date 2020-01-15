@@ -1,4 +1,4 @@
-# Investabit.PublicPriceHistoryResponseDataPriceHistory
+# CryptoWeather.PublicPriceHistoryResponseDataPriceHistory
 
 ## Properties
 Name | Type | Description | Notes

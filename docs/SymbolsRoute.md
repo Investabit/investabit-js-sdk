@@ -1,4 +1,4 @@
-# Investabit.SymbolsRoute
+# CryptoWeather.SymbolsRoute
 
 ## Properties
 Name | Type | Description | Notes
