@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DefaultResponse', 'model/PublicPriceChangeResponse', 'model/PublicPriceCurrentResponse', 'model/PublicPriceHistoryResponse', 'model/PublicSymbolsResponse', 'model/PublicTrendResponse'], factory);
+    define(['ApiClient', 'model/DefaultResponse', 'model/PublicPriceChangeResponse', 'model/PublicPriceCurrentResponse', 'model/PublicPriceHistoryResponse', 'model/PublicSummaryResponse', 'model/PublicSymbolsResponse', 'model/PublicTrendResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/DefaultResponse'), require('../model/PublicPriceChangeResponse'), require('../model/PublicPriceCurrentResponse'), require('../model/PublicPriceHistoryResponse'), require('../model/PublicSymbolsResponse'), require('../model/PublicTrendResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/DefaultResponse'), require('../model/PublicPriceChangeResponse'), require('../model/PublicPriceCurrentResponse'), require('../model/PublicPriceHistoryResponse'), require('../model/PublicSummaryResponse'), require('../model/PublicSymbolsResponse'), require('../model/PublicTrendResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CryptoWeather) {
       root.CryptoWeather = {};
     }
-    root.CryptoWeather.PublicApi = factory(root.CryptoWeather.ApiClient, root.CryptoWeather.DefaultResponse, root.CryptoWeather.PublicPriceChangeResponse, root.CryptoWeather.PublicPriceCurrentResponse, root.CryptoWeather.PublicPriceHistoryResponse, root.CryptoWeather.PublicSymbolsResponse, root.CryptoWeather.PublicTrendResponse);
+    root.CryptoWeather.PublicApi = factory(root.CryptoWeather.ApiClient, root.CryptoWeather.DefaultResponse, root.CryptoWeather.PublicPriceChangeResponse, root.CryptoWeather.PublicPriceCurrentResponse, root.CryptoWeather.PublicPriceHistoryResponse, root.CryptoWeather.PublicSummaryResponse, root.CryptoWeather.PublicSymbolsResponse, root.CryptoWeather.PublicTrendResponse);
   }
-}(this, function(ApiClient, DefaultResponse, PublicPriceChangeResponse, PublicPriceCurrentResponse, PublicPriceHistoryResponse, PublicSymbolsResponse, PublicTrendResponse) {
+}(this, function(ApiClient, DefaultResponse, PublicPriceChangeResponse, PublicPriceCurrentResponse, PublicPriceHistoryResponse, PublicSummaryResponse, PublicSymbolsResponse, PublicTrendResponse) {
   'use strict';
 
   /**
@@ -200,6 +200,47 @@
 
       return this.apiClient.callApi(
         '/v1/public/price-history/{symbol}/{period}/{interval}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the v1PublicSummaryGet operation.
+     * @callback module:api/PublicApi~v1PublicSummaryGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PublicSummaryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Summary
+     * 
+     * @param {module:api/PublicApi~v1PublicSummaryGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PublicSummaryResponse}
+     */
+    this.v1PublicSummaryGet = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = PublicSummaryResponse;
+
+      return this.apiClient.callApi(
+        '/v1/public/summary', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

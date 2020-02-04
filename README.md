@@ -138,6 +138,7 @@ Class | Method | HTTP request | Description
 *CryptoWeather.PublicApi* | [**v1PublicPriceChangeSymbolGet**](docs/PublicApi.md#v1PublicPriceChangeSymbolGet) | **GET** /v1/public/price-change/{symbol} | Price Change
 *CryptoWeather.PublicApi* | [**v1PublicPriceCurrentSymbolGet**](docs/PublicApi.md#v1PublicPriceCurrentSymbolGet) | **GET** /v1/public/price-current/{symbol} | Price Current
 *CryptoWeather.PublicApi* | [**v1PublicPriceHistorySymbolPeriodIntervalGet**](docs/PublicApi.md#v1PublicPriceHistorySymbolPeriodIntervalGet) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
+*CryptoWeather.PublicApi* | [**v1PublicSummaryGet**](docs/PublicApi.md#v1PublicSummaryGet) | **GET** /v1/public/summary | Summary
 *CryptoWeather.PublicApi* | [**v1PublicSymbolsGet**](docs/PublicApi.md#v1PublicSymbolsGet) | **GET** /v1/public/symbols | Symbols
 *CryptoWeather.PublicApi* | [**v1PublicTrendSymbolGet**](docs/PublicApi.md#v1PublicTrendSymbolGet) | **GET** /v1/public/trend/{symbol} | Trend
 
@@ -168,12 +169,16 @@ Class | Method | HTTP request | Description
  - [CryptoWeather.PublicPriceHistoryResponseData](docs/PublicPriceHistoryResponseData.md)
  - [CryptoWeather.PublicPriceHistoryResponseDataHistory](docs/PublicPriceHistoryResponseDataHistory.md)
  - [CryptoWeather.PublicPriceHistoryResponseDataPriceHistory](docs/PublicPriceHistoryResponseDataPriceHistory.md)
+ - [CryptoWeather.PublicSummaryResponse](docs/PublicSummaryResponse.md)
+ - [CryptoWeather.PublicSummaryResponseColor](docs/PublicSummaryResponseColor.md)
+ - [CryptoWeather.PublicSummaryResponseData](docs/PublicSummaryResponseData.md)
  - [CryptoWeather.PublicSymbolsResponse](docs/PublicSymbolsResponse.md)
  - [CryptoWeather.PublicSymbolsResponseData](docs/PublicSymbolsResponseData.md)
  - [CryptoWeather.PublicSymbolsResponseDataSymbols](docs/PublicSymbolsResponseDataSymbols.md)
  - [CryptoWeather.PublicTrendResponse](docs/PublicTrendResponse.md)
  - [CryptoWeather.PublicTrendResponseData](docs/PublicTrendResponseData.md)
  - [CryptoWeather.PublicTrendResponseDataTrend](docs/PublicTrendResponseDataTrend.md)
+ - [CryptoWeather.SummaryRoute](docs/SummaryRoute.md)
  - [CryptoWeather.SymbolsRoute](docs/SymbolsRoute.md)
  - [CryptoWeather.TrendRoute](docs/TrendRoute.md)
  - [CryptoWeather.TrendTabluarRoute](docs/TrendTabluarRoute.md)

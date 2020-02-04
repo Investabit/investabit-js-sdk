@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AccuracyRoute', 'model/DefaultResponse', 'model/ForecastRoute', 'model/PriceChangeRoute', 'model/PriceCurrentRoute', 'model/PriceHistoryRoute', 'model/PrivateAccuracyResponse', 'model/PrivateAccuracyResponseData', 'model/PrivateForecastResponse', 'model/PrivateForecastResponseData', 'model/PrivateForecastResponseDataForecast', 'model/PrivateTrendTabularResponse', 'model/PrivateTrendTabularResponseData', 'model/PrivateTrendTabularResponseDataTrendTabular', 'model/PublicPriceChangeResponse', 'model/PublicPriceChangeResponseData', 'model/PublicPriceChangeResponseDataPriceChange', 'model/PublicPriceCurrentResponse', 'model/PublicPriceCurrentResponseData', 'model/PublicPriceCurrentResponseDataCurrent', 'model/PublicPriceHistoryResponse', 'model/PublicPriceHistoryResponseData', 'model/PublicPriceHistoryResponseDataHistory', 'model/PublicPriceHistoryResponseDataPriceHistory', 'model/PublicSymbolsResponse', 'model/PublicSymbolsResponseData', 'model/PublicSymbolsResponseDataSymbols', 'model/PublicTrendResponse', 'model/PublicTrendResponseData', 'model/PublicTrendResponseDataTrend', 'model/SymbolsRoute', 'model/TrendRoute', 'model/TrendTabluarRoute', 'api/PrivateApi', 'api/PublicApi'], factory);
+    define(['ApiClient', 'model/AccuracyRoute', 'model/DefaultResponse', 'model/ForecastRoute', 'model/PriceChangeRoute', 'model/PriceCurrentRoute', 'model/PriceHistoryRoute', 'model/PrivateAccuracyResponse', 'model/PrivateAccuracyResponseData', 'model/PrivateForecastResponse', 'model/PrivateForecastResponseData', 'model/PrivateForecastResponseDataForecast', 'model/PrivateTrendTabularResponse', 'model/PrivateTrendTabularResponseData', 'model/PrivateTrendTabularResponseDataTrendTabular', 'model/PublicPriceChangeResponse', 'model/PublicPriceChangeResponseData', 'model/PublicPriceChangeResponseDataPriceChange', 'model/PublicPriceCurrentResponse', 'model/PublicPriceCurrentResponseData', 'model/PublicPriceCurrentResponseDataCurrent', 'model/PublicPriceHistoryResponse', 'model/PublicPriceHistoryResponseData', 'model/PublicPriceHistoryResponseDataHistory', 'model/PublicPriceHistoryResponseDataPriceHistory', 'model/PublicSummaryResponse', 'model/PublicSummaryResponseColor', 'model/PublicSummaryResponseData', 'model/PublicSymbolsResponse', 'model/PublicSymbolsResponseData', 'model/PublicSymbolsResponseDataSymbols', 'model/PublicTrendResponse', 'model/PublicTrendResponseData', 'model/PublicTrendResponseDataTrend', 'model/SummaryRoute', 'model/SymbolsRoute', 'model/TrendRoute', 'model/TrendTabluarRoute', 'api/PrivateApi', 'api/PublicApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AccuracyRoute'), require('./model/DefaultResponse'), require('./model/ForecastRoute'), require('./model/PriceChangeRoute'), require('./model/PriceCurrentRoute'), require('./model/PriceHistoryRoute'), require('./model/PrivateAccuracyResponse'), require('./model/PrivateAccuracyResponseData'), require('./model/PrivateForecastResponse'), require('./model/PrivateForecastResponseData'), require('./model/PrivateForecastResponseDataForecast'), require('./model/PrivateTrendTabularResponse'), require('./model/PrivateTrendTabularResponseData'), require('./model/PrivateTrendTabularResponseDataTrendTabular'), require('./model/PublicPriceChangeResponse'), require('./model/PublicPriceChangeResponseData'), require('./model/PublicPriceChangeResponseDataPriceChange'), require('./model/PublicPriceCurrentResponse'), require('./model/PublicPriceCurrentResponseData'), require('./model/PublicPriceCurrentResponseDataCurrent'), require('./model/PublicPriceHistoryResponse'), require('./model/PublicPriceHistoryResponseData'), require('./model/PublicPriceHistoryResponseDataHistory'), require('./model/PublicPriceHistoryResponseDataPriceHistory'), require('./model/PublicSymbolsResponse'), require('./model/PublicSymbolsResponseData'), require('./model/PublicSymbolsResponseDataSymbols'), require('./model/PublicTrendResponse'), require('./model/PublicTrendResponseData'), require('./model/PublicTrendResponseDataTrend'), require('./model/SymbolsRoute'), require('./model/TrendRoute'), require('./model/TrendTabluarRoute'), require('./api/PrivateApi'), require('./api/PublicApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AccuracyRoute'), require('./model/DefaultResponse'), require('./model/ForecastRoute'), require('./model/PriceChangeRoute'), require('./model/PriceCurrentRoute'), require('./model/PriceHistoryRoute'), require('./model/PrivateAccuracyResponse'), require('./model/PrivateAccuracyResponseData'), require('./model/PrivateForecastResponse'), require('./model/PrivateForecastResponseData'), require('./model/PrivateForecastResponseDataForecast'), require('./model/PrivateTrendTabularResponse'), require('./model/PrivateTrendTabularResponseData'), require('./model/PrivateTrendTabularResponseDataTrendTabular'), require('./model/PublicPriceChangeResponse'), require('./model/PublicPriceChangeResponseData'), require('./model/PublicPriceChangeResponseDataPriceChange'), require('./model/PublicPriceCurrentResponse'), require('./model/PublicPriceCurrentResponseData'), require('./model/PublicPriceCurrentResponseDataCurrent'), require('./model/PublicPriceHistoryResponse'), require('./model/PublicPriceHistoryResponseData'), require('./model/PublicPriceHistoryResponseDataHistory'), require('./model/PublicPriceHistoryResponseDataPriceHistory'), require('./model/PublicSummaryResponse'), require('./model/PublicSummaryResponseColor'), require('./model/PublicSummaryResponseData'), require('./model/PublicSymbolsResponse'), require('./model/PublicSymbolsResponseData'), require('./model/PublicSymbolsResponseDataSymbols'), require('./model/PublicTrendResponse'), require('./model/PublicTrendResponseData'), require('./model/PublicTrendResponseDataTrend'), require('./model/SummaryRoute'), require('./model/SymbolsRoute'), require('./model/TrendRoute'), require('./model/TrendTabluarRoute'), require('./api/PrivateApi'), require('./api/PublicApi'));
   }
-}(function(ApiClient, AccuracyRoute, DefaultResponse, ForecastRoute, PriceChangeRoute, PriceCurrentRoute, PriceHistoryRoute, PrivateAccuracyResponse, PrivateAccuracyResponseData, PrivateForecastResponse, PrivateForecastResponseData, PrivateForecastResponseDataForecast, PrivateTrendTabularResponse, PrivateTrendTabularResponseData, PrivateTrendTabularResponseDataTrendTabular, PublicPriceChangeResponse, PublicPriceChangeResponseData, PublicPriceChangeResponseDataPriceChange, PublicPriceCurrentResponse, PublicPriceCurrentResponseData, PublicPriceCurrentResponseDataCurrent, PublicPriceHistoryResponse, PublicPriceHistoryResponseData, PublicPriceHistoryResponseDataHistory, PublicPriceHistoryResponseDataPriceHistory, PublicSymbolsResponse, PublicSymbolsResponseData, PublicSymbolsResponseDataSymbols, PublicTrendResponse, PublicTrendResponseData, PublicTrendResponseDataTrend, SymbolsRoute, TrendRoute, TrendTabluarRoute, PrivateApi, PublicApi) {
+}(function(ApiClient, AccuracyRoute, DefaultResponse, ForecastRoute, PriceChangeRoute, PriceCurrentRoute, PriceHistoryRoute, PrivateAccuracyResponse, PrivateAccuracyResponseData, PrivateForecastResponse, PrivateForecastResponseData, PrivateForecastResponseDataForecast, PrivateTrendTabularResponse, PrivateTrendTabularResponseData, PrivateTrendTabularResponseDataTrendTabular, PublicPriceChangeResponse, PublicPriceChangeResponseData, PublicPriceChangeResponseDataPriceChange, PublicPriceCurrentResponse, PublicPriceCurrentResponseData, PublicPriceCurrentResponseDataCurrent, PublicPriceHistoryResponse, PublicPriceHistoryResponseData, PublicPriceHistoryResponseDataHistory, PublicPriceHistoryResponseDataPriceHistory, PublicSummaryResponse, PublicSummaryResponseColor, PublicSummaryResponseData, PublicSymbolsResponse, PublicSymbolsResponseData, PublicSymbolsResponseDataSymbols, PublicTrendResponse, PublicTrendResponseData, PublicTrendResponseDataTrend, SummaryRoute, SymbolsRoute, TrendRoute, TrendTabluarRoute, PrivateApi, PublicApi) {
   'use strict';
 
   /**
@@ -182,6 +182,21 @@
      */
     PublicPriceHistoryResponseDataPriceHistory: PublicPriceHistoryResponseDataPriceHistory,
     /**
+     * The PublicSummaryResponse model constructor.
+     * @property {module:model/PublicSummaryResponse}
+     */
+    PublicSummaryResponse: PublicSummaryResponse,
+    /**
+     * The PublicSummaryResponseColor model constructor.
+     * @property {module:model/PublicSummaryResponseColor}
+     */
+    PublicSummaryResponseColor: PublicSummaryResponseColor,
+    /**
+     * The PublicSummaryResponseData model constructor.
+     * @property {module:model/PublicSummaryResponseData}
+     */
+    PublicSummaryResponseData: PublicSummaryResponseData,
+    /**
      * The PublicSymbolsResponse model constructor.
      * @property {module:model/PublicSymbolsResponse}
      */
@@ -211,6 +226,11 @@
      * @property {module:model/PublicTrendResponseDataTrend}
      */
     PublicTrendResponseDataTrend: PublicTrendResponseDataTrend,
+    /**
+     * The SummaryRoute model constructor.
+     * @property {module:model/SummaryRoute}
+     */
+    SummaryRoute: SummaryRoute,
     /**
      * The SymbolsRoute model constructor.
      * @property {module:model/SymbolsRoute}

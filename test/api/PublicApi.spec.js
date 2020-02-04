@@ -211,6 +211,103 @@
           done();
         });
       });
+      describe('v1PublicSummaryGet', function() {
+        it('should call v1PublicSummaryGet successfully', function(done) {
+          // TODO: uncomment v1PublicSummaryGet call and complete the assertions
+          /*
+
+          instance.v1PublicSummaryGet(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(CryptoWeather.PublicSummaryResponse);
+            expect(data.success).to.be.a('boolean');
+            expect(data.success).to.be(false);
+            expect(data.code).to.be.a('number');
+            expect(data.code).to.be(0);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("");
+            {
+              let dataCtr = data.data;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(CryptoWeather.PublicSummaryResponseData);
+                expect(data.icon).to.be.a('string');
+                expect(data.icon).to.be("");
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.symbolName).to.be.a('string');
+                expect(data.symbolName).to.be("");
+                expect(data.slug).to.be.a('string');
+                expect(data.slug).to.be("");
+                expect(data.added).to.be.a('number');
+                expect(data.added).to.be();
+                expect(data.color).to.be.a(CryptoWeather.PublicSummaryResponseColor);
+                      expect(data.color.b).to.be.a('number');
+                  expect(data.color.b).to.be();
+                  expect(data.color.g).to.be.a('number');
+                  expect(data.color.g).to.be();
+                  expect(data.color.r).to.be.a('number');
+                  expect(data.color.r).to.be();
+                expect(data.priceBtc).to.be.a('number');
+                expect(data.priceBtc).to.be();
+                expect(data.priceUsd).to.be.a('number');
+                expect(data.priceUsd).to.be();
+                expect(data.marketCap).to.be.a('number');
+                expect(data.marketCap).to.be();
+                expect(data.volumeUsd).to.be.a('number');
+                expect(data.volumeUsd).to.be();
+                expect(data.changePct).to.be.a('number');
+                expect(data.changePct).to.be();
+                expect(data.marketDataTime).to.be.a('number');
+                expect(data.marketDataTime).to.be();
+                {
+                  let dataCtr = data.trend;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(CryptoWeather.PublicTrendResponseDataTrend);
+                    expect(data.timeStart).to.be.a('number');
+                    expect(data.timeStart).to.be();
+                    expect(data.timeEnd).to.be.a('number');
+                    expect(data.timeEnd).to.be();
+                    expect(data.interval).to.be.a('string');
+                    expect(data.interval).to.be("");
+                    expect(data.weightedPrice).to.be.a('number');
+                    expect(data.weightedPrice).to.be();
+                    expect(data.changeUsd).to.be.a('number');
+                    expect(data.changeUsd).to.be();
+                    expect(data.changePct).to.be.a('number');
+                    expect(data.changePct).to.be();
+                    expect(data.confidence).to.be.a('number');
+                    expect(data.confidence).to.be();
+                  }
+                }
+              }
+            }
+            {
+              let dataCtr = data.errors;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Object);
+                expect(data).to.be();
+              }
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('v1PublicSymbolsGet', function() {
         it('should call v1PublicSymbolsGet successfully', function(done) {
           // TODO: uncomment v1PublicSymbolsGet call and complete the assertions
