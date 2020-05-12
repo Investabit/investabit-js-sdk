@@ -30,32 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('PrivateTrendTabularResponseDataTrendTabular', function() {
+    describe('ForecastTimeRoute', function() {
       beforeEach(function() {
-        instance = new CryptoWeather.PrivateTrendTabularResponseDataTrendTabular();
+        instance = new CryptoWeather.ForecastTimeRoute();
       });
 
-      it('should create an instance of PrivateTrendTabularResponseDataTrendTabular', function() {
-        // TODO: update the code to test PrivateTrendTabularResponseDataTrendTabular
-        expect(instance).to.be.a(CryptoWeather.PrivateTrendTabularResponseDataTrendTabular);
-      });
-
-      it('should have the property symbol (base name: "symbol")', function() {
-        // TODO: update the code to test the property symbol
-        expect(instance).to.have.property('symbol');
-        // expect(instance.symbol).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property name (base name: "name")', function() {
-        // TODO: update the code to test the property name
-        expect(instance).to.have.property('name');
-        // expect(instance.name).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property trend (base name: "trend")', function() {
-        // TODO: update the code to test the property trend
-        expect(instance).to.have.property('trend');
-        // expect(instance.trend).to.be(expectedValueLiteral);
+      it('should create an instance of ForecastTimeRoute', function() {
+        // TODO: update the code to test ForecastTimeRoute
+        expect(instance).to.be.a(CryptoWeather.ForecastTimeRoute);
       });
 
     });

@@ -30,32 +30,44 @@
   var instance;
 
   describe('(package)', function() {
-    describe('PrivateTrendTabularResponseDataTrendTabular', function() {
+    describe('PrivateForecastTimeResponse', function() {
       beforeEach(function() {
-        instance = new CryptoWeather.PrivateTrendTabularResponseDataTrendTabular();
+        instance = new CryptoWeather.PrivateForecastTimeResponse();
       });
 
-      it('should create an instance of PrivateTrendTabularResponseDataTrendTabular', function() {
-        // TODO: update the code to test PrivateTrendTabularResponseDataTrendTabular
-        expect(instance).to.be.a(CryptoWeather.PrivateTrendTabularResponseDataTrendTabular);
+      it('should create an instance of PrivateForecastTimeResponse', function() {
+        // TODO: update the code to test PrivateForecastTimeResponse
+        expect(instance).to.be.a(CryptoWeather.PrivateForecastTimeResponse);
       });
 
-      it('should have the property symbol (base name: "symbol")', function() {
-        // TODO: update the code to test the property symbol
-        expect(instance).to.have.property('symbol');
-        // expect(instance.symbol).to.be(expectedValueLiteral);
+      it('should have the property success (base name: "success")', function() {
+        // TODO: update the code to test the property success
+        expect(instance).to.have.property('success');
+        // expect(instance.success).to.be(expectedValueLiteral);
       });
 
-      it('should have the property name (base name: "name")', function() {
-        // TODO: update the code to test the property name
-        expect(instance).to.have.property('name');
-        // expect(instance.name).to.be(expectedValueLiteral);
+      it('should have the property code (base name: "code")', function() {
+        // TODO: update the code to test the property code
+        expect(instance).to.have.property('code');
+        // expect(instance.code).to.be(expectedValueLiteral);
       });
 
-      it('should have the property trend (base name: "trend")', function() {
-        // TODO: update the code to test the property trend
-        expect(instance).to.have.property('trend');
-        // expect(instance.trend).to.be(expectedValueLiteral);
+      it('should have the property status (base name: "status")', function() {
+        // TODO: update the code to test the property status
+        expect(instance).to.have.property('status');
+        // expect(instance.status).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property data (base name: "data")', function() {
+        // TODO: update the code to test the property data
+        expect(instance).to.have.property('data');
+        // expect(instance.data).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property errors (base name: "errors")', function() {
+        // TODO: update the code to test the property errors
+        expect(instance).to.have.property('errors');
+        // expect(instance.errors).to.be(expectedValueLiteral);
       });
 
     });

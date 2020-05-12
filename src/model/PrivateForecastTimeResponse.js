@@ -16,34 +16,34 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/PublicPriceHistoryResponseData'], factory);
+    define(['ApiClient', 'model/PrivateForecastTimeResponseData'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./PublicPriceHistoryResponseData'));
+    module.exports = factory(require('../ApiClient'), require('./PrivateForecastTimeResponseData'));
   } else {
     // Browser globals (root is window)
     if (!root.CryptoWeather) {
       root.CryptoWeather = {};
     }
-    root.CryptoWeather.PublicPriceHistoryResponse = factory(root.CryptoWeather.ApiClient, root.CryptoWeather.PublicPriceHistoryResponseData);
+    root.CryptoWeather.PrivateForecastTimeResponse = factory(root.CryptoWeather.ApiClient, root.CryptoWeather.PrivateForecastTimeResponseData);
   }
-}(this, function(ApiClient, PublicPriceHistoryResponseData) {
+}(this, function(ApiClient, PrivateForecastTimeResponseData) {
   'use strict';
 
   /**
-   * The PublicPriceHistoryResponse model module.
-   * @module model/PublicPriceHistoryResponse
+   * The PrivateForecastTimeResponse model module.
+   * @module model/PrivateForecastTimeResponse
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>PublicPriceHistoryResponse</code>.
-   * @alias module:model/PublicPriceHistoryResponse
+   * Constructs a new <code>PrivateForecastTimeResponse</code>.
+   * @alias module:model/PrivateForecastTimeResponse
    * @class
    * @param success {Boolean} 
    * @param code {Number} 
    * @param status {String} 
-   * @param data {module:model/PublicPriceHistoryResponseData} 
+   * @param data {module:model/PrivateForecastTimeResponseData} 
    */
   var exports = function(success, code, status, data) {
     this.success = success;
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>PublicPriceHistoryResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PrivateForecastTimeResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PublicPriceHistoryResponse} obj Optional instance to populate.
-   * @return {module:model/PublicPriceHistoryResponse} The populated <code>PublicPriceHistoryResponse</code> instance.
+   * @param {module:model/PrivateForecastTimeResponse} obj Optional instance to populate.
+   * @return {module:model/PrivateForecastTimeResponse} The populated <code>PrivateForecastTimeResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -69,7 +69,7 @@
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('data'))
-        obj.data = PublicPriceHistoryResponseData.constructFromObject(data['data']);
+        obj.data = PrivateForecastTimeResponseData.constructFromObject(data['data']);
       if (data.hasOwnProperty('errors'))
         obj.errors = ApiClient.convertToType(data['errors'], [Object]);
     }
@@ -92,7 +92,7 @@
   exports.prototype.status = undefined;
 
   /**
-   * @member {module:model/PublicPriceHistoryResponseData} data
+   * @member {module:model/PrivateForecastTimeResponseData} data
    */
   exports.prototype.data = undefined;
 

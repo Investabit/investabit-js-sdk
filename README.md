@@ -133,6 +133,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CryptoWeather.PrivateApi* | [**v1PrivateAccuracySymbolIntervalPeriodGet**](docs/PrivateApi.md#v1PrivateAccuracySymbolIntervalPeriodGet) | **GET** /v1/private/accuracy/{symbol}/{interval}/{period} | Accuracy
 *CryptoWeather.PrivateApi* | [**v1PrivateForecastSymbolIntervalGet**](docs/PrivateApi.md#v1PrivateForecastSymbolIntervalGet) | **GET** /v1/private/forecast/{symbol}/{interval} | Forecast
+*CryptoWeather.PrivateApi* | [**v1PrivateForecastTimeSymbolIntervalPeriodGet**](docs/PrivateApi.md#v1PrivateForecastTimeSymbolIntervalPeriodGet) | **GET** /v1/private/forecast-time/{symbol}/{interval}/{period} | Forecast Time
 *CryptoWeather.PrivateApi* | [**v1PrivateTrendSymbolGet**](docs/PrivateApi.md#v1PrivateTrendSymbolGet) | **GET** /v1/private/trend/{symbol} | Trend
 *CryptoWeather.PrivateApi* | [**v1PrivateTrendTabularGet**](docs/PrivateApi.md#v1PrivateTrendTabularGet) | **GET** /v1/private/trend-tabular | Trend Tabular
 *CryptoWeather.PublicApi* | [**v1PublicPriceChangeSymbolGet**](docs/PublicApi.md#v1PublicPriceChangeSymbolGet) | **GET** /v1/public/price-change/{symbol} | Price Change
@@ -148,6 +149,7 @@ Class | Method | HTTP request | Description
  - [CryptoWeather.AccuracyRoute](docs/AccuracyRoute.md)
  - [CryptoWeather.DefaultResponse](docs/DefaultResponse.md)
  - [CryptoWeather.ForecastRoute](docs/ForecastRoute.md)
+ - [CryptoWeather.ForecastTimeRoute](docs/ForecastTimeRoute.md)
  - [CryptoWeather.PriceChangeRoute](docs/PriceChangeRoute.md)
  - [CryptoWeather.PriceCurrentRoute](docs/PriceCurrentRoute.md)
  - [CryptoWeather.PriceHistoryRoute](docs/PriceHistoryRoute.md)
@@ -156,6 +158,8 @@ Class | Method | HTTP request | Description
  - [CryptoWeather.PrivateForecastResponse](docs/PrivateForecastResponse.md)
  - [CryptoWeather.PrivateForecastResponseData](docs/PrivateForecastResponseData.md)
  - [CryptoWeather.PrivateForecastResponseDataForecast](docs/PrivateForecastResponseDataForecast.md)
+ - [CryptoWeather.PrivateForecastTimeResponse](docs/PrivateForecastTimeResponse.md)
+ - [CryptoWeather.PrivateForecastTimeResponseData](docs/PrivateForecastTimeResponseData.md)
  - [CryptoWeather.PrivateTrendTabularResponse](docs/PrivateTrendTabularResponse.md)
  - [CryptoWeather.PrivateTrendTabularResponseData](docs/PrivateTrendTabularResponseData.md)
  - [CryptoWeather.PrivateTrendTabularResponseDataTrendTabular](docs/PrivateTrendTabularResponseDataTrendTabular.md)
