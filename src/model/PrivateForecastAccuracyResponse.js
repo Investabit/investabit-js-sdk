@@ -16,47 +16,90 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/PrivateForecastAccuracyResponseData'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./PrivateForecastAccuracyResponseData'));
   } else {
     // Browser globals (root is window)
     if (!root.CryptoWeather) {
       root.CryptoWeather = {};
     }
-    root.CryptoWeather.SymbolsRoute = factory(root.CryptoWeather.ApiClient);
+    root.CryptoWeather.PrivateForecastAccuracyResponse = factory(root.CryptoWeather.ApiClient, root.CryptoWeather.PrivateForecastAccuracyResponseData);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PrivateForecastAccuracyResponseData) {
   'use strict';
 
   /**
-   * The SymbolsRoute model module.
-   * @module model/SymbolsRoute
+   * The PrivateForecastAccuracyResponse model module.
+   * @module model/PrivateForecastAccuracyResponse
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>SymbolsRoute</code>.
-   * @alias module:model/SymbolsRoute
+   * Constructs a new <code>PrivateForecastAccuracyResponse</code>.
+   * @alias module:model/PrivateForecastAccuracyResponse
    * @class
+   * @param success {Boolean} 
+   * @param code {Number} 
+   * @param status {String} 
+   * @param data {module:model/PrivateForecastAccuracyResponseData} 
    */
-  var exports = function() {
+  var exports = function(success, code, status, data) {
+    this.success = success;
+    this.code = code;
+    this.status = status;
+    this.data = data;
   };
 
   /**
-   * Constructs a <code>SymbolsRoute</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PrivateForecastAccuracyResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SymbolsRoute} obj Optional instance to populate.
-   * @return {module:model/SymbolsRoute} The populated <code>SymbolsRoute</code> instance.
+   * @param {module:model/PrivateForecastAccuracyResponse} obj Optional instance to populate.
+   * @return {module:model/PrivateForecastAccuracyResponse} The populated <code>PrivateForecastAccuracyResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('success'))
+        obj.success = ApiClient.convertToType(data['success'], 'Boolean');
+      if (data.hasOwnProperty('code'))
+        obj.code = ApiClient.convertToType(data['code'], 'Number');
+      if (data.hasOwnProperty('status'))
+        obj.status = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('data'))
+        obj.data = PrivateForecastAccuracyResponseData.constructFromObject(data['data']);
+      if (data.hasOwnProperty('errors'))
+        obj.errors = ApiClient.convertToType(data['errors'], [Object]);
     }
     return obj;
   }
+
+  /**
+   * @member {Boolean} success
+   */
+  exports.prototype.success = undefined;
+
+  /**
+   * @member {Number} code
+   */
+  exports.prototype.code = undefined;
+
+  /**
+   * @member {String} status
+   */
+  exports.prototype.status = undefined;
+
+  /**
+   * @member {module:model/PrivateForecastAccuracyResponseData} data
+   */
+  exports.prototype.data = undefined;
+
+  /**
+   * @member {Array.<Object>} errors
+   */
+  exports.prototype.errors = undefined;
 
   return exports;
 

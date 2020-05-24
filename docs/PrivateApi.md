@@ -5,6 +5,7 @@ All URIs are relative to *https://api.cryptoweather.ai*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v1PrivateAccuracySymbolIntervalPeriodGet**](PrivateApi.md#v1PrivateAccuracySymbolIntervalPeriodGet) | **GET** /v1/private/accuracy/{symbol}/{interval}/{period} | Accuracy
+[**v1PrivateForecastAccuracySymbolIntervalPeriodGet**](PrivateApi.md#v1PrivateForecastAccuracySymbolIntervalPeriodGet) | **GET** /v1/private/forecast-accuracy/{symbol}/{interval}/{period} | Forecast Accuracy
 [**v1PrivateForecastSymbolIntervalGet**](PrivateApi.md#v1PrivateForecastSymbolIntervalGet) | **GET** /v1/private/forecast/{symbol}/{interval} | Forecast
 [**v1PrivateForecastTimeSymbolIntervalPeriodGet**](PrivateApi.md#v1PrivateForecastTimeSymbolIntervalPeriodGet) | **GET** /v1/private/forecast-time/{symbol}/{interval}/{period} | Forecast Time
 [**v1PrivateTrendSymbolGet**](PrivateApi.md#v1PrivateTrendSymbolGet) | **GET** /v1/private/trend/{symbol} | Trend
@@ -64,6 +65,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PrivateAccuracyResponse**](PrivateAccuracyResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="v1PrivateForecastAccuracySymbolIntervalPeriodGet"></a>
+# **v1PrivateForecastAccuracySymbolIntervalPeriodGet**
+> PrivateForecastAccuracyResponse v1PrivateForecastAccuracySymbolIntervalPeriodGet(symbol, interval, period, opts)
+
+Forecast Accuracy
+
+
+
+### Example
+```javascript
+var CryptoWeather = require('crypto_weather');
+var defaultClient = CryptoWeather.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: oauth2
+var oauth2 = defaultClient.authentications['oauth2'];
+oauth2.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new CryptoWeather.PrivateApi();
+
+var symbol = "btc"; // String | The cryptocurrency symbol.
+
+var interval = "1h"; // String | The forecast interval, 1h or 1d.
+
+var period = "7d"; // String | The period for computing the error bounds, typically 7d or 30d.
+
+var opts = { 
+  'cookie': "csrf=b1820141-1bad-4a9c-93c0-52022817ce89", // String | e.g. csrf=b1820141-1bad-4a9c-93c0-52022817ce89
+  'xCsrf': "b1820141-1bad-4a9c-93c0-52022817ce89" // String | e.g. b1820141-1bad-4a9c-93c0-52022817ce89
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.v1PrivateForecastAccuracySymbolIntervalPeriodGet(symbol, interval, period, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | **String**| The cryptocurrency symbol. | 
+ **interval** | **String**| The forecast interval, 1h or 1d. | 
+ **period** | **String**| The period for computing the error bounds, typically 7d or 30d. | 
+ **cookie** | **String**| e.g. csrf=b1820141-1bad-4a9c-93c0-52022817ce89 | [optional] 
+ **xCsrf** | **String**| e.g. b1820141-1bad-4a9c-93c0-52022817ce89 | [optional] 
+
+### Return type
+
+[**PrivateForecastAccuracyResponse**](PrivateForecastAccuracyResponse.md)
 
 ### Authorization
 

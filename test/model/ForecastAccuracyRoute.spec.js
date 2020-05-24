@@ -30,44 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('PublicPriceCurrentResponse', function() {
+    describe('ForecastAccuracyRoute', function() {
       beforeEach(function() {
-        instance = new CryptoWeather.PublicPriceCurrentResponse();
+        instance = new CryptoWeather.ForecastAccuracyRoute();
       });
 
-      it('should create an instance of PublicPriceCurrentResponse', function() {
-        // TODO: update the code to test PublicPriceCurrentResponse
-        expect(instance).to.be.a(CryptoWeather.PublicPriceCurrentResponse);
-      });
-
-      it('should have the property success (base name: "success")', function() {
-        // TODO: update the code to test the property success
-        expect(instance).to.have.property('success');
-        // expect(instance.success).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property code (base name: "code")', function() {
-        // TODO: update the code to test the property code
-        expect(instance).to.have.property('code');
-        // expect(instance.code).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property status (base name: "status")', function() {
-        // TODO: update the code to test the property status
-        expect(instance).to.have.property('status');
-        // expect(instance.status).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property data (base name: "data")', function() {
-        // TODO: update the code to test the property data
-        expect(instance).to.have.property('data');
-        // expect(instance.data).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property errors (base name: "errors")', function() {
-        // TODO: update the code to test the property errors
-        expect(instance).to.have.property('errors');
-        // expect(instance.errors).to.be(expectedValueLiteral);
+      it('should create an instance of ForecastAccuracyRoute', function() {
+        // TODO: update the code to test ForecastAccuracyRoute
+        expect(instance).to.be.a(CryptoWeather.ForecastAccuracyRoute);
       });
 
     });

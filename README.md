@@ -132,6 +132,7 @@ All URIs are relative to *https://api.cryptoweather.ai*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CryptoWeather.PrivateApi* | [**v1PrivateAccuracySymbolIntervalPeriodGet**](docs/PrivateApi.md#v1PrivateAccuracySymbolIntervalPeriodGet) | **GET** /v1/private/accuracy/{symbol}/{interval}/{period} | Accuracy
+*CryptoWeather.PrivateApi* | [**v1PrivateForecastAccuracySymbolIntervalPeriodGet**](docs/PrivateApi.md#v1PrivateForecastAccuracySymbolIntervalPeriodGet) | **GET** /v1/private/forecast-accuracy/{symbol}/{interval}/{period} | Forecast Accuracy
 *CryptoWeather.PrivateApi* | [**v1PrivateForecastSymbolIntervalGet**](docs/PrivateApi.md#v1PrivateForecastSymbolIntervalGet) | **GET** /v1/private/forecast/{symbol}/{interval} | Forecast
 *CryptoWeather.PrivateApi* | [**v1PrivateForecastTimeSymbolIntervalPeriodGet**](docs/PrivateApi.md#v1PrivateForecastTimeSymbolIntervalPeriodGet) | **GET** /v1/private/forecast-time/{symbol}/{interval}/{period} | Forecast Time
 *CryptoWeather.PrivateApi* | [**v1PrivateTrendSymbolGet**](docs/PrivateApi.md#v1PrivateTrendSymbolGet) | **GET** /v1/private/trend/{symbol} | Trend
@@ -148,6 +149,7 @@ Class | Method | HTTP request | Description
 
  - [CryptoWeather.AccuracyRoute](docs/AccuracyRoute.md)
  - [CryptoWeather.DefaultResponse](docs/DefaultResponse.md)
+ - [CryptoWeather.ForecastAccuracyRoute](docs/ForecastAccuracyRoute.md)
  - [CryptoWeather.ForecastRoute](docs/ForecastRoute.md)
  - [CryptoWeather.ForecastTimeRoute](docs/ForecastTimeRoute.md)
  - [CryptoWeather.PriceChangeRoute](docs/PriceChangeRoute.md)
@@ -155,6 +157,8 @@ Class | Method | HTTP request | Description
  - [CryptoWeather.PriceHistoryRoute](docs/PriceHistoryRoute.md)
  - [CryptoWeather.PrivateAccuracyResponse](docs/PrivateAccuracyResponse.md)
  - [CryptoWeather.PrivateAccuracyResponseData](docs/PrivateAccuracyResponseData.md)
+ - [CryptoWeather.PrivateForecastAccuracyResponse](docs/PrivateForecastAccuracyResponse.md)
+ - [CryptoWeather.PrivateForecastAccuracyResponseData](docs/PrivateForecastAccuracyResponseData.md)
  - [CryptoWeather.PrivateForecastResponse](docs/PrivateForecastResponse.md)
  - [CryptoWeather.PrivateForecastResponseData](docs/PrivateForecastResponseData.md)
  - [CryptoWeather.PrivateForecastResponseDataForecast](docs/PrivateForecastResponseDataForecast.md)

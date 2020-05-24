@@ -15,62 +15,58 @@
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../src/index'], factory);
+    // AMD. Register as an anonymous module.
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.CryptoWeather);
+    if (!root.CryptoWeather) {
+      root.CryptoWeather = {};
+    }
+    root.CryptoWeather.PrivateForecastAccuracyResponseData = factory(root.CryptoWeather.ApiClient);
   }
-}(this, function(expect, CryptoWeather) {
+}(this, function(ApiClient) {
   'use strict';
 
-  var instance;
+  /**
+   * The PrivateForecastAccuracyResponseData model module.
+   * @module model/PrivateForecastAccuracyResponseData
+   * @version 1.0.0
+   */
 
-  describe('(package)', function() {
-    describe('PublicPriceCurrentResponse', function() {
-      beforeEach(function() {
-        instance = new CryptoWeather.PublicPriceCurrentResponse();
-      });
+  /**
+   * Constructs a new <code>PrivateForecastAccuracyResponseData</code>.
+   * @alias module:model/PrivateForecastAccuracyResponseData
+   * @class
+   * @param accuracy {Number} 
+   */
+  var exports = function(accuracy) {
+    this.accuracy = accuracy;
+  };
 
-      it('should create an instance of PublicPriceCurrentResponse', function() {
-        // TODO: update the code to test PublicPriceCurrentResponse
-        expect(instance).to.be.a(CryptoWeather.PublicPriceCurrentResponse);
-      });
+  /**
+   * Constructs a <code>PrivateForecastAccuracyResponseData</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/PrivateForecastAccuracyResponseData} obj Optional instance to populate.
+   * @return {module:model/PrivateForecastAccuracyResponseData} The populated <code>PrivateForecastAccuracyResponseData</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) {
+      obj = obj || new exports();
+      if (data.hasOwnProperty('accuracy'))
+        obj.accuracy = ApiClient.convertToType(data['accuracy'], 'Number');
+    }
+    return obj;
+  }
 
-      it('should have the property success (base name: "success")', function() {
-        // TODO: update the code to test the property success
-        expect(instance).to.have.property('success');
-        // expect(instance.success).to.be(expectedValueLiteral);
-      });
+  /**
+   * @member {Number} accuracy
+   */
+  exports.prototype.accuracy = undefined;
 
-      it('should have the property code (base name: "code")', function() {
-        // TODO: update the code to test the property code
-        expect(instance).to.have.property('code');
-        // expect(instance.code).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property status (base name: "status")', function() {
-        // TODO: update the code to test the property status
-        expect(instance).to.have.property('status');
-        // expect(instance.status).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property data (base name: "data")', function() {
-        // TODO: update the code to test the property data
-        expect(instance).to.have.property('data');
-        // expect(instance.data).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property errors (base name: "errors")', function() {
-        // TODO: update the code to test the property errors
-        expect(instance).to.have.property('errors');
-        // expect(instance.errors).to.be(expectedValueLiteral);
-      });
-
-    });
-  });
+  return exports;
 
 }));

@@ -15,62 +15,49 @@
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../src/index'], factory);
+    // AMD. Register as an anonymous module.
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.CryptoWeather);
+    if (!root.CryptoWeather) {
+      root.CryptoWeather = {};
+    }
+    root.CryptoWeather.ForecastAccuracyRoute = factory(root.CryptoWeather.ApiClient);
   }
-}(this, function(expect, CryptoWeather) {
+}(this, function(ApiClient) {
   'use strict';
 
-  var instance;
+  /**
+   * The ForecastAccuracyRoute model module.
+   * @module model/ForecastAccuracyRoute
+   * @version 1.0.0
+   */
 
-  describe('(package)', function() {
-    describe('PublicPriceCurrentResponse', function() {
-      beforeEach(function() {
-        instance = new CryptoWeather.PublicPriceCurrentResponse();
-      });
+  /**
+   * Constructs a new <code>ForecastAccuracyRoute</code>.
+   * @alias module:model/ForecastAccuracyRoute
+   * @class
+   */
+  var exports = function() {
+  };
 
-      it('should create an instance of PublicPriceCurrentResponse', function() {
-        // TODO: update the code to test PublicPriceCurrentResponse
-        expect(instance).to.be.a(CryptoWeather.PublicPriceCurrentResponse);
-      });
+  /**
+   * Constructs a <code>ForecastAccuracyRoute</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/ForecastAccuracyRoute} obj Optional instance to populate.
+   * @return {module:model/ForecastAccuracyRoute} The populated <code>ForecastAccuracyRoute</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) {
+      obj = obj || new exports();
+    }
+    return obj;
+  }
 
-      it('should have the property success (base name: "success")', function() {
-        // TODO: update the code to test the property success
-        expect(instance).to.have.property('success');
-        // expect(instance.success).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property code (base name: "code")', function() {
-        // TODO: update the code to test the property code
-        expect(instance).to.have.property('code');
-        // expect(instance.code).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property status (base name: "status")', function() {
-        // TODO: update the code to test the property status
-        expect(instance).to.have.property('status');
-        // expect(instance.status).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property data (base name: "data")', function() {
-        // TODO: update the code to test the property data
-        expect(instance).to.have.property('data');
-        // expect(instance.data).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property errors (base name: "errors")', function() {
-        // TODO: update the code to test the property errors
-        expect(instance).to.have.property('errors');
-        // expect(instance.errors).to.be(expectedValueLiteral);
-      });
-
-    });
-  });
+  return exports;
 
 }));

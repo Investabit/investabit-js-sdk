@@ -30,14 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('PublicPriceCurrentResponse', function() {
+    describe('PrivateForecastAccuracyResponse', function() {
       beforeEach(function() {
-        instance = new CryptoWeather.PublicPriceCurrentResponse();
+        instance = new CryptoWeather.PrivateForecastAccuracyResponse();
       });
 
-      it('should create an instance of PublicPriceCurrentResponse', function() {
-        // TODO: update the code to test PublicPriceCurrentResponse
-        expect(instance).to.be.a(CryptoWeather.PublicPriceCurrentResponse);
+      it('should create an instance of PrivateForecastAccuracyResponse', function() {
+        // TODO: update the code to test PrivateForecastAccuracyResponse
+        expect(instance).to.be.a(CryptoWeather.PrivateForecastAccuracyResponse);
       });
 
       it('should have the property success (base name: "success")', function() {
